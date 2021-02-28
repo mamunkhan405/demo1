@@ -1,0 +1,472 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %} SMCS | Home {% endblock title %}
+
+{% block css %}
+<style>
+  /*galary */
+  img{ max-width:100%;}
+
+.gallery_box li{ width:33.333333%; max-width: 100% ; display:inline-block; float: left; text-align: center; overflow: hidden;    position: relative;}
+.gallery_box{ padding:0;display: flow-root;}
+
+.gallery_box li:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+.gallery_box li img{-webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;}
+.gallery_box li:nth-child(even) {
+    height: 304px;
+}
+.gallery_box li:nth-child(odd) {
+    height: 438px; 
+}
+.gallery_box li:nth-child(odd) .box_data{ background:rgba(0,0,0,0.17) }
+.gallery_box li:nth-child(even) .box_data{ background:rgba(0,44,255,0.27) }
+.gallery_box .box_data{ position:absolute; top: 0; left: 0; right:0; bottom:0; color:#fff;}
+.gallery_box .box_data span{ position:absolute; top: 50%; transform: translateY(-50%); left:0 ; right:0; font-size:24px;}
+.gallery_box li:hover .box_data{ background:rgba(255,0,39,0.55)}
+  /*galary */
+  .text-btn{
+    color: blue;
+  }
+  .card{
+    border: 2px dotted #FFA500;
+    background: #FFA500;
+
+  }
+  .card:hover{
+    background: #fcfcfb;
+
+    color: rgb(0, 0, 0);
+  }
+  /**/
+  .cta .cta-btn:hover {
+    background: #FFA500;
+    border: 2px solid #FFA500;
+  }
+  .section-title h2::after {
+    content: '';
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: #FFA500;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .services .icon-box {
+    border: 2px dotted #FFA500;
+    text-align: center;
+    padding: 40px 20px;
+    transition: all ease-in-out 0.3s;
+    background: #fff;
+  }
+  
+  .services .icon-box .icon {
+    border: 2px solid #FFA500;
+    margin: 0 auto;
+    width: 64px;
+    height: 64px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    transition: ease-in-out 0.3s;
+    color: #FFA500;
+  }
+  
+  .services .icon-box .icon i {
+    font-size: 28px;
+  }
+  
+  .services .icon-box h4 {
+    font-weight: 700;
+    margin-bottom: 15px;
+    font-size: 24px;
+  }
+  
+  .services .icon-box h4 a {
+    color: #36343a;
+    transition: ease-in-out 0.3s;
+  }
+  
+  .services .icon-box p {
+    line-height: 24px;
+    font-size: 14px;
+    margin-bottom: 0;
+  }
+  
+  .services .icon-box:hover {
+    border-color: #FFA500;
+    box-shadow: 0px 0 25px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .services .icon-box:hover h4 a {
+    color: #FFA500;
+  }
+  
+  .services .icon-box:hover .icon {
+    color: #fff;
+    background: #FFA500;
+  }
+ 
+</style>
+{% endblock css %}
+
+{% block body %}
+<main id="main">
+
+  <!-- ======= Counts Section ======= -->
+  <section id="counts" class="counts">
+    <div class="container">
+
+      <div class="row counters">
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">9,234</span>
+          <p>Beneficiaries</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">5,021</span>
+          <p>Happy Donators</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">1,896</span>
+          <p>Volunteer</p>
+        </div>
+
+        <div class="col-lg-3 col-6 text-center">
+          <span data-toggle="counter-up">1,567</span>
+          <p>Donated Poor</p>
+        </div>
+      </div>
+    </div>
+  </section><!-- End Counts Section -->
+
+
+
+  <!-- ======= Cta Section ======= -->
+  <section id="cta" class="cta">
+    <div class="container">
+
+      <div class="text-center" data-aos="zoom-in">
+        <h3>An International Independent Charity Organization</h3>
+        <p> Humanity dolorsit ametisciLorem ipsum dolor sit amet, consecquia voluptas sit aspernatur aut odit aut fugit.</p>
+        <a class="cta-btn" href="/joinus">Get Membership</a>
+      </div>
+
+    </div>
+  </section>
+  <!--====== End Cta Section ========= -->
+
+  <!-- ======= Services Section ======= -->
+  <section id="services" class="services section-bg">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-4">
+          <div class="section-title" data-aos="fade-right">
+            <h2> Our Services</h2>
+            
+            <p>Magnam dolores commodi suscipit nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.<br>
+              Magnam dolores commodi suscipit nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quasMagnam </p>
+              
+              <a href="/service" class="btn btn-bg mt-4"> View All Service</a>
+          </div>
+          
+          <!-- our services  -->
+        </div>
+        <div class="col-lg-8">
+          <div class="row">
+            <div class="col-md-6 d-flex align-items-stretch">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="100">
+                <div class="icon"><i class="bx bxl-dribbble"></i></div>
+                <h4><a href="">Lorem Ipsum</a></h4>
+                <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4 mt-lg-0">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="200">
+                <div class="icon"><i class="bx bx-file"></i></div>
+                <h4><a href="">Sed ut perspiciatis</a></h4>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="300">
+                <div class="icon"><i class="bx bx-tachometer"></i></div>
+                <h4><a href="">Magni Dolores</a></h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
+              </div>
+            </div>
+
+            <div class="col-md-6 d-flex align-items-stretch mt-4">
+              <div class="icon-box" data-aos="zoom-in" data-aos-delay="400">
+                <div class="icon"><i class="bx bx-world"></i></div>
+                <h4><a href="">Nemo Enim</a></h4>
+                <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+  <!-- End Services Section -->
+
+
+  <!-- SLIDER SECTION START -->
+  
+
+  <!--END OF SLIDER SECTION  -->
+
+  <!-- EVENT  -->
+  <section id="events" class="services ">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="section-title" data-aos="fade-right">
+            <!-- <img src="https://source.unsplash.com/600x900/?animal,water" alt=""> -->
+            <h2> Upcoming Events</h2>
+            <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolores magnam blanditiis, consectetur quibusdam suscipit veniam deleniti hic vitae maxime natus mo.<br><br>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolores magnam blanditiis, consectetur quibusdam suscipit veniam deleniti hic vitae maxime natus mo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolores magnam blanditiis, consectetur quibusdam suscipit veniam deleniti hic vitae maxime natus mo. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dignissimos dolores magnam blanditiis, consectetur quibusdam suscipit veniam deleniti hic vitae maxime natus mo.
+            </p>
+            <a href="/events" class="btn btn-bg mt-4"> View All Events</a>
+          </div>
+        </div>
+        <div class="col-lg-7">
+          <div class="row">
+            <!-- EVENTS  -->
+              <div class="col-lg-12">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-primary">World</strong>
+                    
+                    <div class="mb-1 text-muted">Nov 12</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="text-btn">Continue reading</a>
+                  </div>
+                  <img src="https://source.unsplash.com/150x150/?donation,hallowen" alt="">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-success">Design</strong>
+                    
+                    <div class="mb-1 text-muted">Nov 11</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="text-btn">Continue reading</a>
+
+                  </div>
+                  <img src="https://source.unsplash.com/150x150/?suit,food" alt="">
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                  <div class="card-body d-flex flex-column align-items-start">
+                    <strong class="d-inline-block mb-2 text-success">Design</strong>
+                    
+                    <div class="mb-1 text-muted">Nov 11</div>
+                    <p class="card-text mb-auto">This is a wider card with supporting text below as a natural lead-in to additional content.</p>
+                    <a href="#" class="text-btn">Continue reading</a>
+
+                  </div>
+                  <img src="https://source.unsplash.com/150x150/?poor,people" alt="">
+                </div>
+              </div>
+            </div>
+            <!-- events  -->
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- EVENT  -->
+
+  <!-- GALARY  -->
+  <div class=" mt-4">
+    <ul class="gallery_box">
+      <li>
+        <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span>Donate Food</span>
+        </div></a>
+      </li>
+        <li>
+          <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span>Cloth</span>
+        </div></a>
+      </li>
+        <li>
+          <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span>Water</span>
+        </div></a>
+      </li>
+          <li>
+            <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span> Education</span>
+        </div></a>
+      </li>
+          <li style="position: relative;top: -134px;">
+            <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span>Clothes</span>
+        </div></a>
+      </li>
+          <li>
+            <a href="/gallery">
+          <img src="{% static 'assets/img/gallary/g1.jpg' %}">
+        <div class="box_data">
+          <span>Home</span>
+        </div></a>
+      </li>
+      
+    </ul>
+  </div>
+  <!-- GALARY  -->
+
+  <!-- SUCCESS STORY  -->
+  <div class=" mt-4 mb-4">
+     <!-- ======= Testimonials Section ======= -->
+     <section id="testimonials" class="testimonials section-bg">
+      <div class="container">
+
+        <div class="row">
+          <div class="col-lg-4">
+            <div class="section-title" data-aos="fade-right">
+              <h2>Success Story of SMCS</h2>
+              <p>Magnam dolores commodi suscipit uisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+              <a href="/success_story" class=" btn btn-bg  mt-4 ">View Success Story</a>
+            </div>
+          </div>
+          <div class="col-lg-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="owl-carousel testimonials-carousel">
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-1.jpg ' %}" class="testimonial-img" alt="">
+                <h3>Saul Goodman</h3>
+                <h4>Ceo &amp; Founder</h4>
+              </div>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+                <h3>Sara Wilsson</h3>
+                <h4>Designer</h4>
+              </div>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+                <h3>Jena Karlis</h3>
+                <h4>Store Owner</h4>
+              </div>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+                <h3>Matt Brandon</h3>
+                <h4>Freelancer</h4>
+              </div>
+
+              <div class="testimonial-item">
+                <p>
+                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                </p>
+                <img src="{% static 'assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+                <h3>John Larson</h3>
+                <h4>Entrepreneur</h4>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+    
+
+  </div>
+
+  <!-- SUCCESS STORY  -->
+
+</main><!-- End #main -->
+{% endblock body %}
+
+{% block script %} 
+<script>
+  $('.owl-carousel').owlCarousel({
+    loop:true,
+    margin:10,
+    nav:false,
+    dots:false,
+    autoplay:true,
+    autoplayTimeout:1000,
+    autoplayHoverPause:true,
+    responsive:{
+        0:{
+            items:1
+        },
+        600:{
+            items:1
+        },
+        1000:{
+            items:1,
+            
+        }
+    }
+})
+$('.play').on('click',function(){
+  owl.trigger('play.owl.autoplay',[1000])
+})
+$('.stop').on('click',function(){
+  owl.trigger('stop.owl.autoplay')
+})
+</script>
+{% endblock script %}
